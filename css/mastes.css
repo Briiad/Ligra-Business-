@@ -1,0 +1,317 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/Desktop\ -\ 1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-link {
+  background: #292929;
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+label {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 2rem 0 2rem;
+  font-size: 17px;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  min-height: 70px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2vh;
+  align-items: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  background: #292929;
+  opacity: 0.95;
+  position: fixed;
+  z-index: 1;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 20%;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.header-content {
+  display: inline-flex;
+  align-items: center;
+}
+.header-content svg {
+  width: 454px;
+  height: 118px;
+}
+
+/* SVG Animation */
+
+#logo {
+  animation: fill 1s ease forwards 3.5s;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 313.21600341796875;
+  stroke-dashoffset: 313.21600341796875;
+  animation: logo 3s ease forwards;
+}
+#logo path:nth-child(2) {
+  stroke-dasharray: 242.94403076171875;
+  stroke-dashoffset: 242.94403076171875;
+  animation: logo 3s ease forwards 0.3s;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 651.9473876953125;
+  stroke-dashoffset: 651.9473876953125;
+  animation: logo 3s ease forwards 0.6s;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 484.77862548828125;
+  stroke-dashoffset: 484.77862548828125;
+  animation: logo 3s ease forwards 0.9s;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 550.2366333007812;
+  stroke-dashoffset: 550.2366333007812;
+  animation: logo 3s ease forwards 1.2s;
+}
+
+/* End of SVG Animation */
+
+.header-content {
+  flex: 1;
+}
+
+.content-desc {
+  flex: 1;
+  margin: 0 10px 0 10px;
+}
+.content-desc h1 {
+  color: #fff;
+  font-size: 24px;
+  animation: text 2s ease forwards 4s;
+  opacity: 0;
+}
+.content-desc p {
+  font-size: 16px;
+  color: #fff;
+  text-align: justify;
+  animation: text2 2s ease forwards 5s;
+  opacity: 0;
+}
+
+.content-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.lets {
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  letter-spacing: 10px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content-card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 250px 110px;
+  grid-template-areas: "image" "text";
+  background: #d6d6d6;
+  border-radius: 18px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5rem;
+  transition: all 0.5s ease;
+}
+
+.card-image {
+  grid-area: "image";
+  position: relative;
+  background: url("/img/Android\ -\ 2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.card-image img {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  transition: 0.3s ease;
+}
+
+.card-image img:hover {
+  width: 35%;
+  height: 35%;
+}
+
+.card-text {
+  grid-area: "text";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  padding: 10px;
+}
+
+.card-text img {
+  width: 30%;
+  height: 30%;
+}
+/* SVG Animation Keyframe */
+
+@keyframes logo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #fff;
+  }
+}
+
+/* End of SVG Animation Keyframe*/
+
+@keyframes text {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes text2 {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-section {
+    width: 100%;
+  }
+
+  .content-desc p,
+  h1 {
+    text-align: center;
+  }
+
+  .header-content svg {
+    width: 360px;
+    height: 87px;
+  }
+
+  .link {
+    font-size: 18px;
+    color: #fff;
+    padding: 2rem 0 2rem 0;
+  }
+
+  .header-logo img {
+    width: 20px;
+  }
+
+  .lets {
+    font-size: 30px;
+    letter-spacing: 0px;
+  }
+
+  /* NAV */
+
+  .nav-link {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    align-items: center;
+    background: #545454;
+  }
+  label {
+    display: block;
+  }
+  .nav-label span {
+    height: 2px;
+    width: 2em;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  .link::after {
+    content: "";
+    display: block;
+    background: none;
+  }
+
+  #nav-toggle:checked ~ .nav-link {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 10px 10px;
+  }
+}
